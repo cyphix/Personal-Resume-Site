@@ -1,0 +1,14 @@
+<div class="resume-section">
+    <div id="skills-section" class="container">
+        <h2 class="text-center">Skills</h2>
+        <hr>
+
+        {% if skills %}
+            {% include "includes/programming_skills.html" %}
+        {% endif %}
+
+        {% if tools %}
+            {% include "includes/software_skills.html" %}
+        {% endif %}
+    </div>
+</div>

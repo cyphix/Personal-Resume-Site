@@ -1,0 +1,165 @@
+/* Bootstrap adjustments */
+.container
+{
+    max-width: 1280px;
+    padding: 40px 180px;
+}
+
+/* Resume specific CSS*/
+body
+{
+    background: #E4FFFE;
+}
+
+.resume-section:nth-child(odd)
+{
+    background: #FFFFFF;
+}
+
+
+
+.jumbotron
+{
+    background: no-repeat center fixed url(/static/interactive_resume/images/sunset.jpg);
+
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+    margin-bottom: 0px;
+	padding: 0px;
+    height: 100vh;
+}
+
+.jumbotron .page-top-overlay
+{
+    background-color: #999999;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    opacity: 0.25;
+    z-index: 2;
+}
+
+.jumbotron .container
+{
+    position: relative;
+    top: 40%;
+    z-index: 4;
+    text-align: center;
+}
+.jumbotron .container > *
+{
+    text-align: center;
+    color: #FFFFFF;
+}
+.jumbotron .container h1
+{
+    padding-bottom: 10px;
+    border-bottom: 2px solid #FFFFFF;
+    border-bottom-color: rgba(255,255,255,0.35);
+    display: inline-block;
+}
+
+/*:target
+{
+    display: block;
+    position: relative;
+    top: -120px;
+    visibility: hidden;
+}*/
+
+
+
+.job-row
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+#skill-list-area > div,
+#tool-list-area > div
+{
+    opacity: 1;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+.skill-item, .tool-item
+{
+    opacity: 1;
+   -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+#skill-list-area:hover > div:hover .skill-item,
+#tool-list-area:hover > div:hover .tool-item
+{
+    opacity: 1;
+    background-color: #E1E2A0;
+
+	-webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+#skill-list-area:hover > div:not(:hover) > .skill-item,
+#tool-list-area:hover > div:not(:hover) > .tool-item
+{
+     opacity: 0.5;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+
+#skill-list-area:hover > div:hover .skill-item > span > img,
+#tool-list-area:hover > div:hover .tool-item > span > img
+{
+    margin-left: 5px;
+    margin-right: 5px;
+
+	-webkit-transition: all 0.25s linear;
+    transition: all 0.25s linear;
+}
+#skill-list-area:hover > div:not(:hover) .skill-item > span > img,
+#tool-list-area:hover > div:not(:hover) .tool-item > span > img
+{
+    margin-left: 0px;
+    margin-right: 0px;
+
+	-webkit-transition: all 0.25s linear;
+    transition: all 0.25s linear;
+}
+
+
+
+#contact
+{
+    background: #181818;
+}
+
+#contact h2, #contact span, #contact #copyright
+{
+    color: #737373;
+}
+
+#contact li
+{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#copyright
+{
+    margin-top: 30px;
+
+    width: 100%;
+    text-align: center;
+
+    font-size: 0.8em;
+}

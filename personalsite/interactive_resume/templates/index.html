@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+
+
+{% block navbar_block %}
+
+    <!--<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="#education-section">Education</a></li>
+            <li class="nav-item"><a class="nav-link" href="#job-section">Job History</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skill-section">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="#tool-section">Tools</a></li>
+        </ul>
+    </nav>-->
+
+{% endblock %}
+
+
+
+{% block main_block %}
+
+    <div id="page-top" class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="text-center">Kenneth Walker</h1>
+            <h4 class="text-center">Resume</h4>
+        </div>
+        <div class="page-top-overlay"></div>
+    </div>
+
+    <div>
+        {% if profile %}
+            {% include "includes/profile.html" %}
+        {% endif %}
+
+        {% if education %}
+            {% include "includes/education.html" %}
+        {% endif %}
+
+        {% if job_history %}
+            {% include "includes/job_history.html" %}
+        {% endif %}
+
+        {% if skills or tools %}
+            {% include "includes/skills.html" %}
+        {% endif %}
+
+        <!--{% if projects %}
+            {% include "includes/project.html" %}
+        {% endif %}-->
+
+        {% include "includes/contact.html" %}
+    </div>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+User-agent: Baidu
+Crawl-delay: 240
+Disallow: /admin/
+
+User-agent: discobot
+Crawl-delay: 240
+Disallow: /admin/
+
+User-agent: litefinder
+Crawl-delay: 240
+Disallow: /admin/
+
+User-agent: msnbot
+Crawl-delay: 240
+Disallow: /admin/
+
+User-agent: Slurp
+Crawl-delay: 240
+Disallow: /admin/
+
+
+
+User-agent: *
+Crawl-delay: 240
+Disallow: /admin/

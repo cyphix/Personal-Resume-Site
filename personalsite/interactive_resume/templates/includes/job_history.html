@@ -1,0 +1,41 @@
+<div class="resume-section">
+    <div id="job-section" class="container">
+        <h2 class="text-center">Job History</h2>
+        <hr>
+
+        {% for job_instance in job_history.all %}
+            {% if job_instance.showing %}
+                <div class="row job-row">
+                    <div class="col-md-4">
+                        <h4>{{job_instance.employer_name}}</h4>
+
+                        {% if job_instance.start_date and not job_instance.end_date %}
+                            <p>{{job_instance.start_date}}</p>
+                        {% endif %}
+                        {% if not job_instance.start_date and job_instance.end_date %}
+                            <p>{{job_instance.end_date}}</p>
+                        {% endif %}
+                        {% if job_instance.start_date and job_instance.end_date %}
+                            <p>{{job_instance.start_date}} - {{job_instance.end_date}}</p>
+                        {% endif %}
+                    </div>
+                    <div class="col-md-8">
+                        <p>
+                            <strong>{{job_instance.position_title}}</strong><br>
+                            <span>{{job_instance.job_description}}</span>
+                            <span>
+                                <ul>
+                                    {% for job_info in job_history_info.all %}
+                                        {% if job_info.job.id == job_instance.id %}
+                                            <li>{{job_info.job_info}}</li>
+                                        {% endif %}
+                                    {% endfor %}
+                                </ul>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>

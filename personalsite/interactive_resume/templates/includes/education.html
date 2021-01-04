@@ -1,0 +1,32 @@
+<div class="resume-section">
+    <div id="education-section" class="container">
+        <h2 class="text-center">Education</h2>
+        <hr>
+
+        {% for school in education.all %}
+            {% if school.showing %}
+                <div class="row">
+                    <div class="col-md-4">
+                        <h4>{{school.school_name}}</h4>
+
+                        {% if school.start_date and not school.end_date %}
+                            <p>{{school.start_date}}</p>
+                        {% endif %}
+                        {% if not school.start_date and school.end_date %}
+                            <p>{{school.end_date}}</p>
+                        {% endif %}
+                        {% if school.start_date and school.end_date %}
+                            <p>{{school.start_date}} - {{school.end_date}}</p>
+                        {% endif %}
+                    </div>
+                    <div class="col-md-8">
+                        <p>
+                            <strong>{{school.degree_title}}</strong><br>
+                            <span>{{school.details_description}}</span>
+                        </p>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
